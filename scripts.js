@@ -1,10 +1,17 @@
 todos = [];
+instructions = [
+  { inst: "Use the input field to add new to-dos" },
+  { inst: "Click the to-do text to toggle between done / undone" },
+  { inst: "Use clear all button to remove all items" },
+];
 
 const toDoList = {
   data() {
     return {
       lien: "https://twitter.com/GuillaumeXR",
+      author: "Guillaume Chevreuil",
       title: "To-do list ",
+      instructions: instructions,
       todos: todos,
       newTodo: {
         done: false,

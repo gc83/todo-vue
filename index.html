@@ -43,16 +43,14 @@
         </section>
         <div class="instructions">
           <p>Instructions:</p>
-          <ul>
-            <li>Use the input field to add new to-dos</li>
-            <li>Click the to-do text to toggle between done / undone</li>
-            <li>Use clear all button to remove all items</li>
+          <ul v-for="inst in instructions">
+            <li>{{inst.inst}}</li>
           </ul>
         </div>
       </div>
       <footer class="footer">
         <hr />
-        <a :href="lien">Guillaume Chevreuil</a>
+        <a :href="lien">{{author}}</a>
       </footer>
     </main>
 
