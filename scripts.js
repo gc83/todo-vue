@@ -8,8 +8,6 @@ instructions = [
 const toDoList = {
   data() {
     return {
-      lien: "https://twitter.com/GuillaumeXR",
-      author: "Guillaume Chevreuil",
       title: "To-do list ",
       instructions: instructions,
       todos: todos,

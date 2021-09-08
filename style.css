@@ -172,25 +172,3 @@ div.instructions ul li {
   margin: 4px auto;
   color: rgb(233, 233, 233);
 }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
-
-footer hr {
-  width: 100vw;
-}
-footer a {
-  text-decoration: none;
-  font-size: 1.5em;
-  color: white;
-  margin: 0.5em 0;
-  padding-bottom: 8px;
-  font-family: "Damion", cursive;
-  text-shadow: 5px 2px 8px rgba(0, 0, 0, 0.25);
-  letter-spacing: 0.15em;
-}
