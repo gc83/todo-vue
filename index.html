@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do List</title>
+  </head>
+
+  <body>
+    <main id="app">
+      <div class="all">
+        <h1>{{title}}</h1>
+        <section class="todo-list">
+          <form>
+            <input
+              type="text"
+              placeholder="Add new to-do"
+              v-model="newTodo.todo"
+            />
+            <button class="add" @click.prevent="addTodo()">Add</button>
+          </form>
+          <ul class="all-todos" v-for="todo in todos">
+            <li
+              class="single-todo"
+              :class="{done : todo.done}"
+              @click="todo.done = !todo.done"
+            >
+              {{todo.todo}}
+            </li>
+          </ul>
+
+          <button class="clear" @click="todos=[]" v-if="todos.length">
+            Clear All
+          </button>
+        </section>
+        <div class="instructions">
+          <p>Instructions:</p>
+          <ul>
+            <li>Use the input field to add new to-dos</li>
+            <li>Click the to-do text to toggle between done / undone</li>
+            <li>Use clear all button to remove all items</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <hr />
+        <a :href="lien">Guillaume Chevreuil</a>
+      </footer>
+    </main>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

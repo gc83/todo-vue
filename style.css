@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: radial-gradient(
+    circle at top right,
+    hsla(32, 100%, 50%, 0.75),
+    hsla(0, 100%, 50%, 0.75),
+    hsla(338, 78%, 54%, 0.75)
+  );
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+.all {
+  margin-top: -200px;
+}
+
+h1 {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+  color: rgb(61, 61, 61);
+  font-family: "Damion", cursive;
+  color: white;
+  text-align: center;
+  font-size: 5em;
+}
+
+.all-todos,
+.clear {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+main .todo-list input {
+  box-sizing: border-box;
+  height: 28px;
+  border-radius: 0.25rem;
+  width: 80%;
+  border: 1px solid lightgrey;
+  margin: 1em 0;
+}
+
+main button {
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 28px;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+main button:focus,
+input:focus {
+  outline: none;
+}
+
+main button:hover {
+  box-shadow: 0px 1.5px 10px rgba(0, 0, 0, 0.25);
+}
+
+main button.add {
+  border: 1px solid #cc7532;
+  background-color: #ff9340;
+
+  margin-left: 2px;
+  transition: 0.45s;
+}
+
+main button.clear {
+  border: 1px solid #d33d44;
+  background-color: #fc4750;
+  display: block;
+  margin: auto;
+  transition: 0.45s;
+}
+
+main > section.todo-list h3 {
+  text-align: center;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.todo-list {
+  flex-wrap: wrap;
+
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  background-color: rgba(248, 248, 248, 0.452);
+  padding: 20px;
+  max-width: 500px;
+  min-width: 300px;
+  text-align: center;
+  border-radius: 0.3rem;
+  transition: 0.75s;
+}
+
+main .all-todos .single-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  margin: 12px 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 1s;
+  font-weight: normal;
+  color: rgb(39, 39, 39);
+}
+
+.done {
+  text-decoration: line-through;
+  color: rgb(110, 110, 110);
+}
+
+main .all-todos .single-todo button.remove {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: transparent url("img/remove.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+main > section.todo-list button.clear {
+  margin-top: 24px;
+}
+
+div.instructions {
+  margin-top: 5em;
+  text-align: center;
+  padding: 0 50px;
+  font-size: 11px;
+  color: rgb(228, 228, 228);
+}
+
+div.instructions ul {
+  list-style: inside;
+  text-align: center;
+  padding: 0;
+}
+
+div.instructions ul li {
+  margin: 4px auto;
+  color: rgb(233, 233, 233);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer hr {
+  width: 100vw;
+}
+footer a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  margin: 0.5em 0;
+  padding-bottom: 8px;
+  font-family: "Damion", cursive;
+  text-shadow: 5px 2px 8px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.15em;
+}
