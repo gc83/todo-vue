@@ -1,5 +1,7 @@
 # TO-DO LIST 📝
 
+[Live demo](https://gc83.github.io/todo-vue/)
+
 A simple personal exercise to discover [Vue.js (v3)](https://v3.vuejs.org/)
 
 Single page of a simple to-do list with a local storage.
