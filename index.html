@@ -27,8 +27,9 @@
             />
             <button class="add" @click.prevent="addTodo()">Add</button>
           </form>
-          <ul class="all-todos" v-for="todo in todos">
+          <ul class="all-todos" v-if="todos.length">
             <li
+              v-for="todo in todos"
               class="single-todo"
               :class="{done : todo.done}"
               @click="todo.done = !todo.done"
@@ -36,15 +37,17 @@
               {{todo.todo}}
             </li>
           </ul>
-          <hr v-if="todos.length" />
-          <button class="clear" @click="todos=[]" v-if="todos.length">
-            Clear All
-          </button>
+          <footer>
+            <hr v-if="todos.length" />
+            <button class="clear" @click="todos=[]" v-if="todos.length">
+              Clear All
+            </button>
+          </footer>
         </section>
         <div class="instructions">
           <p>Instructions:</p>
-          <ul v-for="inst in instructions">
-            <li>{{inst.inst}}</li>
+          <ul>
+            <li v-for="inst in instructions">{{inst.inst}}</li>
           </ul>
         </div>
       </div>
