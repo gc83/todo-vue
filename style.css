@@ -150,7 +150,7 @@ main .all-todos .single-todo button.remove {
 }
 
 .todo-list hr {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.45em;
   border: rgba(255, 255, 255, 0.541) 0.25px solid;
   animation-name: fadeIn;
   animation-duration: 1.5s;

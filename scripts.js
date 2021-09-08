@@ -26,7 +26,7 @@ const toDoList = {
         };
         localStorage.setItem("todos", JSON.stringify(this.todos));
       } else {
-        alert("Ecrivre d'abord une nouvelle chose a faire 😄");
+        alert("Write something first 😄");
       }
     },
   },
